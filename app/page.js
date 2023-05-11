@@ -7,11 +7,11 @@ export default function Home() {
       <Header />
       <main>
         <div className="h-[30rem] bg-[url('/banner2.jpg')] w-full">
-          <div className="w-[60%] mx-auto h-full flex flex-col justify-center items-center">
+          <div className="w-[90%] lg:w-[60%] mx-auto h-full flex flex-col justify-center items-center">
             <p className="text-white uppercase text-sm underline-offset-4 underline tracking-wide font-medium">
               Universidades
             </p>
-            <h1 className="text-4xl font-bold text-center text-white">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center text-white">
               SGMU Universidad Médica de Saratov: Ubicación, facultades e
               instalaciones
             </h1>

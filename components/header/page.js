@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../button/page"
+import { Menu } from "../Icons/page"
 
 const navigation = [
   { name: "Inicio", href: "/" },
@@ -25,7 +26,8 @@ export function Header() {
           />
         </Link>
         <nav>
-          <ul className="flex items-center">
+          <Menu className="lg:hidden w-6 h-6 -mt-1" fill="#3B82F6" />
+          <ul className="lg:flex items-center hidden">
             {navigation.map((item) => (
               <li key={item.name} className="ml-7">
                 <Link href={item.href}>{item.name}</Link>
