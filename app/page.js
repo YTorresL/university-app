@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <div className="h-[30rem] bg-[url('/banner2.jpg')]">
+        <div className="h-[30rem] bg-[url('/banner2.jpg')] w-full">
           <div className="w-[60%] mx-auto h-full flex flex-col justify-center items-center">
             <p className="text-white uppercase text-sm underline-offset-4 underline tracking-wide font-medium">
               Universidades
