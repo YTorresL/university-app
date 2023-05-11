@@ -518,6 +518,9 @@ video {
 .mb-16 {
   margin-bottom: 4rem;
 }
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
 .flex {
   display: flex;
 }
@@ -548,6 +551,9 @@ video {
 .h-8 {
   height: 2rem;
 }
+.h-9 {
+  height: 2.25rem;
+}
 .w-\[60\%\] {
   width: 60%;
 }
@@ -571,6 +577,9 @@ video {
 }
 .w-16 {
   width: 4rem;
+}
+.w-9 {
+  width: 2.25rem;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -652,6 +661,10 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .text-center {
   text-align: center;
@@ -741,6 +754,10 @@ body {
 }
 
 @media (min-width: 768px) {
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .md\:text-4xl {
     font-size: 2.25rem;

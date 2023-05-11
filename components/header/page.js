@@ -26,7 +26,7 @@ export function Header() {
           />
         </Link>
         <nav>
-          <Menu className="lg:hidden w-6 h-6 -mt-1" fill="#3B82F6" />
+          <Menu className="lg:hidden w-9 h-9 -mt-1" fill="#3B82F6" />
           <ul className="lg:flex items-center hidden">
             {navigation.map((item) => (
               <li key={item.name} className="ml-7">

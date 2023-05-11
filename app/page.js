@@ -2,6 +2,25 @@ import { Sample } from "@/components/Icons/page"
 import { Button } from "@/components/button/page"
 import { Header } from "@/components/header/page"
 
+const benefits = [
+  {
+    title: "Visa 100% garantizada",
+  },
+  {
+    title: "Admisión confirmada",
+  },
+  {
+    title: "Alojamiento garantizado",
+  },
+  {
+    title: "Seguro de viaje y médico",
+  },
+  {
+    title: "Asesoría personalizada",
+  },
+  { title: "Acompañamiento en todo el proceso" },
+]
+
 export default function Home() {
   return (
     <>
@@ -24,8 +43,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full py-28">
-          <div className="w-[90%] lg:w-[60%] mx-auto mb-16">
+        <div className="py-24">
+          <div className="w-[90%] lg:w-[60%] mx-auto mb-10">
             <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-500">
               ¿Por qué elegirnos?
             </h2>
@@ -36,16 +55,19 @@ export default function Home() {
             </p>
           </div>
           <div className="w-[90%] lg:w-[60%] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <div className="border border-blue-500 py-6 px-8">
-                <Sample className="w-16 h-16 mx-auto my-6" fill="#3B82F6" />
-                <h3 className="text-base font-semibold uppercase text-center leading-5 tracking-wide">
-                  Visa 100% garantizada
-                </h3>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {benefits.map((item, index) => (
+                <div className="border border-blue-500 py-6 px-8" key={index}>
+                  <Sample className="w-16 h-16 mx-auto my-6" fill="#3B82F6" />
+                  <h3 className="text-base font-semibold uppercase text-center leading-5 tracking-wide">
+                    {item.title}
+                  </h3>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+        <div className="py-24"></div>
       </main>
     </>
   )
