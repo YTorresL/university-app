@@ -33,7 +33,10 @@ export function Header() {
             ))}
             <li className="ml-7">
               <Link href="/asesoria">
-                <Button title={"Asesorias"} />
+                <Button
+                  title="Asesorias"
+                  styles="bg-blue-500 hover:bg-blue-700 text-white"
+                />
               </Link>
             </li>
           </ul>

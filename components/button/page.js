@@ -1,6 +1,6 @@
-export function Button({ title }) {
+export function Button({ title, styles }) {
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded">
+    <button className={`font-medium py-2 px-4 rounded ${styles}`}>
       {title}
     </button>
   )
