@@ -1,6 +1,7 @@
 import { Sample } from "@/components/Icons/page"
 import { Button } from "@/components/button/page"
 import { Header } from "@/components/header/page"
+import { Titles } from "@/components/titles/page"
 import Image from "next/image"
 
 const benefits = [
@@ -22,12 +23,33 @@ const benefits = [
   { title: "Acompañamiento en todo el proceso" },
 ]
 
+const prices = [
+  {
+    title: "Preuniversitario",
+    price: "570",
+  },
+  {
+    title: "Licenciaturas y Carreras",
+    price: "800",
+  },
+  {
+    title: "Maestrías",
+    price: "1000",
+  },
+]
+
 export default function Home() {
   return (
     <>
       <Header />
+      <div className="bg-blue-700 py-2 absolute right-0 left-0">
+        <p className="w-full text-center text-white">
+          ¿Te preocupa el idioma? El primer año aprenderás el idioma ruso desde
+          cero
+        </p>
+      </div>
       <main>
-        <div className="h-[32rem] bg-[url('/banner2.jpg')] w-full">
+        <div className="h-[33rem] bg-[url('/banner2.jpg')] w-full">
           <div className="w-[90%] lg:w-[60%] mx-auto h-full flex flex-col justify-center items-center">
             <p className="text-white uppercase text-sm underline-offset-4 underline tracking-wide font-medium">
               Universidades
@@ -45,22 +67,17 @@ export default function Home() {
           </div>
         </div>
         <div className="py-24">
-          <div className="w-[90%] lg:w-[50%] mx-auto mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center text-blue-500">
-              ¿Por qué elegirnos?
-            </h2>
-            <p className="text-center my-5 leading-6 text-gray-700">
-              Décadas de experiencia, personal altamente calificado y convenios
-              exclusivos, nos permiten garantizar educación de excelencia en las
-              20 mejores universidades rusas.
-            </p>
-          </div>
+          <Titles
+            title="¿Por qué elegirnos?"
+            paragraph="Décadas de experiencia, personal altamente calificado y conveniosexclusivos, nos permiten garantizar educación de excelencia en las 20 mejores universidades rusas."
+            titleStyle=""
+          />
           <div className="w-[90%] lg:w-[60%] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {benefits.map((item, index) => (
                 <div className="border border-blue-500 py-6 px-8" key={index}>
                   <Sample className="w-16 h-16 mx-auto my-6" fill="#3B82F6" />
-                  <h3 className="text-base font-semibold uppercase text-center leading-5 tracking-wide">
+                  <h3 className="text-base font-semibold uppercase text-center leading-5 tracking-wide text-gray-700">
                     {item.title}
                   </h3>
                 </div>
@@ -69,16 +86,12 @@ export default function Home() {
           </div>
         </div>
         <div className="py-24">
-          <div className="w-[90%] lg:w-[50%] mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center text-blue-500 uppercase">
-              En Rusia puedes estudiar
-            </h2>
-            <p className="text-center my-5 leading-6 text-gray-700">
-              Tienes la oportunidad de estudiar en las mejores universidades de
-              Rusia, con programas de pregrado, posgrado, maestrías y doctorado.
-            </p>
-          </div>
-          <div className="flex items-center w-[90%] mx-auto">
+          <Titles
+            title="En Rusia puedes estudiar"
+            paragraph="Tienes la oportunidad de estudiar en las mejores universidades de Rusia, con programas de pregrado, posgrado, maestrías y doctorado."
+            titleStyle="uppercase"
+          />
+          <div className="flex items-center flex-col md:flex-row w-[90%] mx-auto">
             <div className="h-96 w-96">
               <Image
                 src="/banner2.jpg"
@@ -87,8 +100,8 @@ export default function Home() {
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="ml-6 w-[60%]">
-              <p className="text-black uppercase text-sm underline-offset-4 underline tracking-wide font-medium mb-3">
+            <div className="md:ml-6 w-full md:w-[60%]">
+              <p className="text-black uppercase text-sm underline-offset-4 underline tracking-wide font-medium mb-3 mt-4 md:mt-0">
                 Universidades
               </p>
               <h2 className="text-3xl lg:text-4xl font-bold text-blue-500">
@@ -103,12 +116,37 @@ export default function Home() {
               </p>
               <Button
                 title="Mas información"
-                styles="bg-blue-500 hover:bg-blue-600 text-white"
+                styles="bg-blue-500 hover:bg-blue-700 text-white"
               />
             </div>
           </div>
         </div>
-        <div className="py-24"></div>
+        <div className="py-24 bg-slate-50">
+          <Titles
+            title="Precios por semestre desde"
+            paragraph="Tienes la oportunidad de estudiar en las mejores universidades de Rusia, con programas de pregrado, posgrado, maestrías y doctorado."
+            titleStyle=""
+          />
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-[90%] lg:w-[65%] mx-auto">
+            {prices.map((item, index) => (
+              <div class="text-center" key={index}>
+                <div class="px-6 py-4 rounded shadow bg-white">
+                  <h1 class="mb-2 text-gray-400 text-lg">{item.title}</h1>
+                  <div class="flex items-center justify-center my-10">
+                    <span class="text-2xl -mt-8">$</span>
+                    <span class="text-6xl">{item.price}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-16">
+            <Button
+              title="Mas información"
+              styles="bg-blue-500 hover:bg-blue-700 text-white"
+            />
+          </div>
+        </div>
       </main>
     </>
   )
