@@ -34,12 +34,11 @@ export function Header() {
               </li>
             ))}
             <li className="ml-7">
-              <Link href="/asesoria">
-                <Button
-                  title="Asesorias"
-                  styles="bg-blue-500 hover:bg-blue-700 text-white"
-                />
-              </Link>
+              <Button
+                title="Asesorias"
+                styles="bg-blue-500 hover:bg-blue-700 text-white"
+                link="/asesoria"
+              />
             </li>
           </ul>
         </nav>

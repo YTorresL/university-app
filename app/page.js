@@ -1,4 +1,5 @@
 import { AppLayout } from "@/components/AppLayout/page"
+import { Footer } from "@/components/Footer/page"
 import { Sample } from "@/components/Icons/page"
 import { Button } from "@/components/button/page"
 import { Header } from "@/components/header/page"
@@ -72,6 +73,7 @@ export default function Home() {
               <Button
                 title="Mas información"
                 styles="bg-white hover:bg-gray-50 text-blue-500"
+                link="/"
               />
             </div>
           </div>
@@ -127,6 +129,7 @@ export default function Home() {
               <Button
                 title="Mas información"
                 styles="bg-blue-500 hover:bg-blue-700 text-white"
+                link="/"
               />
             </div>
           </div>
@@ -154,6 +157,7 @@ export default function Home() {
             <Button
               title="Mas información"
               styles="bg-blue-500 hover:bg-blue-700 text-white"
+              link="/"
             />
           </div>
         </AppLayout>
@@ -192,6 +196,7 @@ export default function Home() {
           <Button
             title="Mas información"
             styles="bg-blue-500 hover:bg-blue-700 text-white"
+            link="/"
           />
         </AppLayout>
         <AppLayout styles="text-center">
@@ -206,6 +211,7 @@ export default function Home() {
           <Button
             title="Mas información"
             styles="bg-blue-500 hover:bg-blue-700 text-white"
+            link="/"
           />
         </AppLayout>
         <AppLayout styles="bg-gray-50 text-center">
@@ -215,6 +221,7 @@ export default function Home() {
             titleStyle=""
           />
         </AppLayout>
+        <Footer />
       </main>
     </>
   )
