@@ -104,7 +104,7 @@ export default function Home() {
             titleStyle="uppercase"
           />
           <div className="flex items-center flex-col md:flex-row w-[90%] mx-auto">
-            <div className="h-96 w-96">
+            <div className="md:h-96 md:w-96 w-64 h-64">
               <Image
                 src="/banner2.jpg"
                 width={500}
@@ -167,7 +167,7 @@ export default function Home() {
             paragraph="Décadas de experiencia, personal altamente calificado y convenios exclusivos, nos permiten garantizar educación de excelencia en las 20 mejores universidades rusas."
             titleStyle=""
           />
-          <div className="w-[50%] mx-auto">
+          <div className="lg:w-[50%] w-[80%] mx-auto">
             {step.map((item, index) => (
               <div className="flex mt-5" key={index}>
                 <div>
