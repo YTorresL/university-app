@@ -1,3 +1,4 @@
+import { AppLayout } from "@/components/AppLayout/page"
 import { Sample } from "@/components/Icons/page"
 import { Button } from "@/components/button/page"
 import { Header } from "@/components/header/page"
@@ -38,6 +39,15 @@ const prices = [
   },
 ]
 
+const step = [
+  {
+    id: 1,
+    title: "Inscripción",
+    description:
+      "Inscríbete on-line o en nuestras oficinas en tu país de residencia.",
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -49,7 +59,7 @@ export default function Home() {
         </p>
       </div>
       <main>
-        <div className="h-[33rem] bg-[url('/banner2.jpg')] w-full">
+        <div className="h-[33rem] bg-[url('/banner2.jpg')] w-full bg-no-repeat bg-cover bg-center">
           <div className="w-[90%] lg:w-[60%] mx-auto h-full flex flex-col justify-center items-center">
             <p className="text-white uppercase text-sm underline-offset-4 underline tracking-wide font-medium">
               Universidades
@@ -66,7 +76,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="py-24">
+        <AppLayout styles="bg-gray-50">
           <Titles
             title="¿Por qué elegirnos?"
             paragraph="Décadas de experiencia, personal altamente calificado y conveniosexclusivos, nos permiten garantizar educación de excelencia en las 20 mejores universidades rusas."
@@ -84,8 +94,8 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
-        <div className="py-24">
+        </AppLayout>
+        <AppLayout>
           <Titles
             title="En Rusia puedes estudiar"
             paragraph="Tienes la oportunidad de estudiar en las mejores universidades de Rusia, con programas de pregrado, posgrado, maestrías y doctorado."
@@ -120,8 +130,8 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-        <div className="py-24 bg-slate-50">
+        </AppLayout>
+        <AppLayout styles="bg-gray-50">
           <Titles
             title="Precios por semestre desde"
             paragraph="Tienes la oportunidad de estudiar en las mejores universidades de Rusia, con programas de pregrado, posgrado, maestrías y doctorado."
@@ -146,7 +156,65 @@ export default function Home() {
               styles="bg-blue-500 hover:bg-blue-700 text-white"
             />
           </div>
-        </div>
+        </AppLayout>
+        <AppLayout>
+          <Titles
+            title="¿Cómo es el proceso?"
+            paragraph="Décadas de experiencia, personal altamente calificado y convenios exclusivos, nos permiten garantizar educación de excelencia en las 20 mejores universidades rusas."
+            titleStyle=""
+          />
+          <div className="w-[50%] mx-auto">
+            {step.map((item, index) => (
+              <div className="flex mt-5" key={index}>
+                <div>
+                  <div className="rounded-full bg-blue-700 font-extrabold px-2 py-1 text-white">
+                    {item.id}
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h2 className="text-xl font-bold text-blue-500">
+                    {item.title}
+                  </h2>
+                  <p className="my-2 leading-6 text-gray-700">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </AppLayout>
+        <AppLayout styles="bg-gray-50 text-center">
+          <Titles
+            title="Top 10 de las mejores universidades"
+            paragraph="Rusia es considerada uno de los países más educados del mundo por la OCDE, contando con universidades reconocidas en Europa y a nivel mundial."
+            titleStyle=""
+          />
+          <Button
+            title="Mas información"
+            styles="bg-blue-500 hover:bg-blue-700 text-white"
+          />
+        </AppLayout>
+        <AppLayout styles="text-center">
+          <Titles
+            title="Testimonios RU"
+            paragraph="Décadas de experiencia, personal altamente calificado y convenios exclusivos, nos permiten garantizar educación de excelencia en las 20 mejores universidades rusas."
+            titleStyle=""
+          />
+          <div className="w-[90%] lg:w-[60%] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+          </div>
+          <Button
+            title="Mas información"
+            styles="bg-blue-500 hover:bg-blue-700 text-white"
+          />
+        </AppLayout>
+        <AppLayout styles="bg-gray-50 text-center">
+          <Titles
+            title="Contacto"
+            paragraph="Rusia es considerada uno de los países más educados del mundo por la OCDE, contando con universidades reconocidas en Europa y a nivel mundial."
+            titleStyle=""
+          />
+        </AppLayout>
       </main>
     </>
   )
