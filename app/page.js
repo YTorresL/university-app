@@ -47,34 +47,41 @@ const step = [
     description:
       "Inscríbete on-line o en nuestras oficinas en tu país de residencia.",
   },
+  {
+    id: 2,
+    title: "Seguridad y Confianza",
+    description:
+      "Te garantizamos: emisión de la carta de invitación para el ingreso a la Federación Rusa.",
+  },
+  {
+    id: 3,
+    title: "Visa",
+    description: "Te ayudamos a tramitar la visa de estudiante.",
+  },
 ]
 
 export default function Home() {
   return (
     <>
       <Header />
-      <div className="bg-blue-700 py-2 absolute right-0 left-0">
-        <p className="w-full text-center text-white">
-          ¿Te preocupa el idioma? El primer año aprenderás el idioma ruso desde
-          cero
-        </p>
-      </div>
       <main>
-        <div className="h-[33rem] bg-[url('/banner2.jpg')] w-full bg-no-repeat bg-cover bg-center">
-          <div className="w-[90%] lg:w-[60%] mx-auto h-full flex flex-col justify-center items-center">
-            <p className="text-white uppercase text-sm underline-offset-4 underline tracking-wide font-medium">
-              Universidades
-            </p>
-            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center text-white">
-              SGMU Universidad Médica de Saratov: Ubicación, facultades e
-              instalaciones
-            </h1>
-            <div className="w-full flex justify-center">
-              <Button
-                title="Mas información"
-                styles="bg-white hover:bg-gray-50 text-blue-500"
-                link="/"
-              />
+        <div className="h-[32rem] bg-[url('/banner.jpg')] w-full bg-no-repeat bg-cover bg-center">
+          <div className="w-full h-full bg-blue-950/50">
+            <div className="w-[90%] lg:w-[60%] mx-auto h-full flex flex-col justify-center items-center">
+              <p className="text-white uppercase text-sm underline-offset-4 underline tracking-wide font-medium">
+                Nosotros nos encargamos de todo
+              </p>
+              <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center text-white">
+                Te Ayudamos en la Gestión y Trámites necesarios para Estudiar en
+                Rusia
+              </h1>
+              <div className="w-full flex justify-center">
+                <Button
+                  title="Mas información"
+                  styles="bg-white hover:bg-gray-50 text-blue-500"
+                  link="/"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -104,15 +111,17 @@ export default function Home() {
             titleStyle="uppercase"
           />
           <div className="flex items-center flex-col md:flex-row w-[90%] mx-auto">
-            <div className="md:h-96 md:w-96 w-64 h-64">
-              <Image
-                src="/banner2.jpg"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover object-center"
-              />
+            <div>
+              <div className="md:h-96 md:w-96 w-64 h-64">
+                <Image
+                  src="/university.jpg"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
-            <div className="md:ml-6 w-full md:w-[60%]">
+            <div className="md:ml-10 w-full md:w-[60%]">
               <p className="text-black uppercase text-sm underline-offset-4 underline tracking-wide font-medium mb-3 mt-4 md:mt-0">
                 Universidades
               </p>
@@ -220,6 +229,32 @@ export default function Home() {
             paragraph="Rusia es considerada uno de los países más educados del mundo por la OCDE, contando con universidades reconocidas en Europa y a nivel mundial."
             titleStyle=""
           />
+          <form className="w-[90%] lg:w-[30%] mx-auto">
+            <div className="grid grid-cols-1 gap-5">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <textarea
+                name=""
+                id=""
+                cols="20"
+                rows="10"
+                placeholder="Mensaje"
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              ></textarea>
+            </div>
+          </form>
         </AppLayout>
         <Footer />
       </main>

@@ -1,1 +1,14 @@
-{"cssImports":{"C:\\Users\\yalit\\Desktop\\YTorres\\rusia-app\\app\\layout.js":["C:\\Users\\yalit\\Desktop\\YTorres\\rusia-app\\app\\globals.css","C:\\Users\\yalit\\Desktop\\YTorres\\rusia-app\\node_modules\\normalize.css\\normalize.css"]},"cssModules":{"C:\\Users\\yalit\\Desktop\\YTorres\\rusia-app\\app\\page":["C:\\Users\\yalit\\Desktop\\YTorres\\rusia-app\\app\\globals.css","C:\\Users\\yalit\\Desktop\\YTorres\\rusia-app\\node_modules\\normalize.css\\normalize.css"]}}
+{
+  "cssImports": {
+    "C:\\Users\\yalit\\Desktop\\YTorres\\university-app\\app\\layout.js": [
+      "C:\\Users\\yalit\\Desktop\\YTorres\\university-app\\app\\globals.css",
+      "C:\\Users\\yalit\\Desktop\\YTorres\\university-app\\node_modules\\normalize.css\\normalize.css"
+    ]
+  },
+  "cssModules": {
+    "C:\\Users\\yalit\\Desktop\\YTorres\\university-app\\app\\page": [
+      "C:\\Users\\yalit\\Desktop\\YTorres\\university-app\\app\\globals.css",
+      "C:\\Users\\yalit\\Desktop\\YTorres\\university-app\\node_modules\\normalize.css\\normalize.css"
+    ]
+  }
+}
