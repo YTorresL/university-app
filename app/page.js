@@ -75,7 +75,7 @@ export default function Home() {
                 Te Ayudamos en la Gestión y Trámites necesarios para Estudiar en
                 Rusia
               </h1>
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center mt-2">
                 <Button
                   title="Mas información"
                   styles="bg-white hover:bg-gray-50 text-blue-500"
