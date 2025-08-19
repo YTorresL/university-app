@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className="w-full 2xl:max-w-screen-xl mx-auto">{children}</body>
     </html>
   )
 }
