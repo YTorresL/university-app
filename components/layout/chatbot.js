@@ -254,7 +254,7 @@ export function ChatbotModal() {
                 </Button>
               </form>
               <div className="flex items-center justify-center mt-2 text-xs text-gray-400">
-                <span>We're ⚡ by</span>
+                <span>We{`'`}re ⚡ by</span>
                 <span className="ml-1 text-blue-500 font-medium">
                   StudyRussia
                 </span>
